@@ -82,7 +82,8 @@ function Layout({ contentSize = "md", children }) {
       <Main>
         <Container
           sx={{
-            maxWidth: contentSizes[contentSize]
+            maxWidth: contentSizes[contentSize],
+            p: [3, 4]
           }}
         >
           {children}

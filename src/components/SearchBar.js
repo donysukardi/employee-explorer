@@ -31,7 +31,7 @@ function SearchBar(props) {
           required
           sx={{
             flex: 1,
-            fontSize: 2
+            fontSize: [1, 2]
           }}
           {...restProps}
         />
@@ -42,7 +42,8 @@ function SearchBar(props) {
         >
           <Button
             sx={{
-              fontSize: 2
+              fontSize: [1, 2],
+              height: "100%"
             }}
           >
             Search

@@ -17,7 +17,7 @@ function HomeScreen(props) {
           placeholder="Enter employee name..."
           onSubmit={handleSubmit}
         />
-        <Box sx={{ mt: 3, ml: 2, fontSize: 1 }}>
+        <Box sx={{ mt: 3, ml: 2, fontSize: [0, 1] }}>
           <Link to={`/${encodeURIComponent("John Hartman")}`}>
             Try "John Hartman"?
           </Link>

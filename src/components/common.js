@@ -7,7 +7,8 @@ const commonFormStyle = {
   display: "inline-block",
   py: 2,
   fontSize: 0,
-  appearance: "none"
+  appearance: "none",
+  margin: 0
 };
 
 function Input(props) {
