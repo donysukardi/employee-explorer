@@ -150,7 +150,7 @@ function PersonnelOverview(props) {
           }
           subordinates.forEach(doFetch);
         } else {
-          var error = new Error(response.statusText || response.status);
+          const error = new Error(response.statusText || response.status);
           error.response = response;
           throw error;
         }
