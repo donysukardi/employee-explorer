@@ -1,3 +1,4 @@
+import { act } from "@testing-library/react";
 import { visit, flushPromises } from "../../utils/test";
 
 describe("PersonnelOverviewScreen", () => {
@@ -11,7 +12,9 @@ describe("PersonnelOverviewScreen", () => {
     fetchJsonSpy.mockResolvedValue(["employee"]);
 
     const screen = visit("/John Steve");
-    await flushPromises();
+    await act(async () => {
+      await flushPromises();
+    });
 
     expect(
       screen.getByText("John Steve's Subordinates Tree")
@@ -35,7 +38,9 @@ describe("PersonnelOverviewScreen", () => {
       .mockResolvedValueOnce(["marketing executive"]);
 
     const screen = visit("/Maggie Choo");
-    await flushPromises();
+    await act(async () => {
+      await flushPromises();
+    });
 
     expect(
       screen.getByText("marketing director - Subordinates: 2")
@@ -53,7 +58,9 @@ describe("PersonnelOverviewScreen", () => {
     });
 
     const screen = visit("/Jane Doe");
-    await flushPromises();
+    await act(async () => {
+      await flushPromises();
+    });
 
     expect(screen.getByText("Error")).toBeInTheDocument();
     expect(
