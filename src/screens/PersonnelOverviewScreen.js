@@ -10,7 +10,7 @@ import DisplayModeToggle, {
 import { List, ListFlat, ListItem, ListItemContent } from "../components/List";
 
 const BASE_ENDPOINT =
-  "https://additivasia-api.glitch.me/api/v1/assignment/employees";
+  "https://api.additivasia.io/api/v1/assignment/employees";
 
 function getAllSubordinates(personnel, personnelMap) {
   const meta = personnelMap[personnel];
